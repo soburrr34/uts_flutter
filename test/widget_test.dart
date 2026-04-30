@@ -5,26 +5,28 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutter_application_11/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Dashboard smoke test', (WidgetTester tester) async {
+    // Build app dan render frame pertama
+    await tester.pumpWidget(const MyPortoApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verifikasi AppBar title "MyPorto" muncul
+    expect(find.text('MyPorto'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Verifikasi teks subtitle dashboard muncul
+    expect(find.text('Cek hasil karyaku disini:'), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verifikasi semua 7 tombol menu muncul
+    expect(find.text('Counter'), findsOneWidget);
+    expect(find.text('Widget Bertingkat'), findsOneWidget);
+    expect(find.text('User Input Example'), findsOneWidget);
+    expect(find.text('Dynamic List Example'), findsOneWidget);
+    expect(find.text('Navigasi Sederhana'), findsOneWidget);
+    expect(find.text('Grid View'), findsOneWidget);
+    expect(find.text('Tentang Saya'), findsOneWidget);
   });
 }
