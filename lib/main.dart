@@ -15,7 +15,7 @@ class MyPortoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF5C6BC0),
+          seedColor: const Color.fromARGB(255, 20, 18, 177),
           brightness: Brightness.light,
         ),
         useMaterial3: true,

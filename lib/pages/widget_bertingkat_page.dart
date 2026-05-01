@@ -8,7 +8,7 @@ class WidgetBertingkatPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F6FA),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF5C6BC0),
+        backgroundColor: const Color.fromARGB(255, 50, 248, 0),
         foregroundColor: Colors.white,
         title: const Text(
           'Widget Bertingkat',
@@ -65,7 +65,10 @@ class WidgetBertingkatPage extends StatelessWidget {
                               const Text(
                                 'Kiri\n(Column\ndalam Row)',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ],
                           ),
@@ -84,7 +87,10 @@ class WidgetBertingkatPage extends StatelessWidget {
                           ),
                           child: Column(
                             children: [
-                              const Icon(Icons.layers, color: Color(0xFFFF7043)),
+                              const Icon(
+                                Icons.layers,
+                                color: Color(0xFFFF7043),
+                              ),
                               const SizedBox(height: 4),
                               // === LEVEL 4: Row di dalam Column ===
                               Row(
@@ -113,7 +119,10 @@ class WidgetBertingkatPage extends StatelessWidget {
                               const Text(
                                 'Tengah\n(Row L4)',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ],
                           ),
@@ -132,12 +141,18 @@ class WidgetBertingkatPage extends StatelessWidget {
                           ),
                           child: Column(
                             children: [
-                              const Icon(Icons.widgets, color: Color(0xFF7E57C2)),
+                              const Icon(
+                                Icons.widgets,
+                                color: Color(0xFF7E57C2),
+                              ),
                               const SizedBox(height: 4),
                               const Text(
                                 'Kanan\n(Column\ndalam Row)',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ],
                           ),
@@ -159,12 +174,18 @@ class WidgetBertingkatPage extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.info_outline, color: Color(0xFF26C6DA)),
+                        const Icon(
+                          Icons.info_outline,
+                          color: Color(0xFF26C6DA),
+                        ),
                         const SizedBox(width: 8),
                         const Expanded(
                           child: Text(
                             'Container Level 2 — Full Width (Row + Icon + Text)',
-                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                       ],
@@ -179,14 +200,46 @@ class WidgetBertingkatPage extends StatelessWidget {
             const SizedBox(height: 12),
 
             // Penjelasan hierarki
-            _HierarchyItem(level: 0, label: 'Column (Root)', color: const Color(0xFF5C6BC0)),
-            _HierarchyItem(level: 1, label: 'Container Level 1', color: const Color(0xFF5C6BC0)),
-            _HierarchyItem(level: 2, label: 'Row (Level 2)', color: const Color(0xFF43A047)),
-            _HierarchyItem(level: 3, label: 'Container Kiri', color: const Color(0xFF43A047)),
-            _HierarchyItem(level: 3, label: 'Container Tengah', color: const Color(0xFFFF7043)),
-            _HierarchyItem(level: 4, label: 'Row (Level 4)', color: const Color(0xFFFF7043)),
-            _HierarchyItem(level: 3, label: 'Container Kanan', color: const Color(0xFF7E57C2)),
-            _HierarchyItem(level: 2, label: 'Container Full Width', color: const Color(0xFF26C6DA)),
+            _HierarchyItem(
+              level: 0,
+              label: 'Column (Root)',
+              color: const Color(0xFF5C6BC0),
+            ),
+            _HierarchyItem(
+              level: 1,
+              label: 'Container Level 1',
+              color: const Color(0xFF5C6BC0),
+            ),
+            _HierarchyItem(
+              level: 2,
+              label: 'Row (Level 2)',
+              color: const Color(0xFF43A047),
+            ),
+            _HierarchyItem(
+              level: 3,
+              label: 'Container Kiri',
+              color: const Color(0xFF43A047),
+            ),
+            _HierarchyItem(
+              level: 3,
+              label: 'Container Tengah',
+              color: const Color(0xFFFF7043),
+            ),
+            _HierarchyItem(
+              level: 4,
+              label: 'Row (Level 4)',
+              color: const Color(0xFFFF7043),
+            ),
+            _HierarchyItem(
+              level: 3,
+              label: 'Container Kanan',
+              color: const Color(0xFF7E57C2),
+            ),
+            _HierarchyItem(
+              level: 2,
+              label: 'Container Full Width',
+              color: const Color(0xFF26C6DA),
+            ),
           ],
         ),
       ),
@@ -229,7 +282,11 @@ class _HierarchyItem extends StatelessWidget {
       child: Row(
         children: [
           if (level > 0) ...[
-            Icon(Icons.subdirectory_arrow_right, size: 16, color: Colors.grey[400]),
+            Icon(
+              Icons.subdirectory_arrow_right,
+              size: 16,
+              color: Colors.grey[400],
+            ),
             const SizedBox(width: 4),
           ],
           Container(
